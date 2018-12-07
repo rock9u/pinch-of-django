@@ -1,0 +1,11 @@
+{% load bootstrap4 %}
+<form action="/projects/create/" method="post" class="form">
+  {% csrf_token %}
+  <input id="name" type="text" name="name" value="{{ name }}">
+  <input id="description" type="text" name="description" value="{{ description }}">
+  {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  {% endbuttons %}
+</form>
